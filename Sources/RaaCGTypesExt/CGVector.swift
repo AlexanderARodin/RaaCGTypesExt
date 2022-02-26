@@ -32,6 +32,12 @@ CGVector { // additive
 	static func - (left: CGVector, right: CGVector) -> CGVector {
 		left + (-right)
 	}
+	static func += (left: inout CGVector, right: CGVector) {
+		left = left + right
+	}
+	static func -= (left: inout CGVector, right: CGVector) {
+		left = left - right
+	}
 }
 
 public extension

@@ -74,6 +74,36 @@ class CGVectorONLYTest: XCTestCase {
 			}
 		}
 	}
+	func testAddEq() throws {
+		for x1 in 0...10 {
+			for y1 in 0...10 {
+				for x2 in 0...10 {
+					for y2 in 0...10 {
+						var a = CGVector(dx: Double(x1), dy: Double(y1))
+						let b = CGVector(dx: Double(x2), dy: Double(y2))
+						a += b
+						XCTAssert(a.dx == Double(x1+x2))
+						XCTAssert(a.dy == Double(y1+y2))
+					}
+				}
+			}
+		}
+	}
+	func testResEq() throws {
+		for x1 in 0...10 {
+			for y1 in 0...10 {
+				for x2 in 0...10 {
+					for y2 in 0...10 {
+						var a = CGVector(dx: Double(x1), dy: Double(y1))
+						let b = CGVector(dx: Double(x2), dy: Double(y2))
+						a -= b
+						XCTAssert(a.dx == Double(x1-x2))
+						XCTAssert(a.dy == Double(y1-y2))
+					}
+				}
+			}
+		}
+	}
 	func testMult_1() throws {
 		for x1 in 0...10 {
 			for y1 in 0...10 {
