@@ -1,3 +1,4 @@
 # RaaCGTypesExt
 
-A description of this package.
+Поупражнялся в накидывании пакета для своих целей.
+А чего достиг ты?
